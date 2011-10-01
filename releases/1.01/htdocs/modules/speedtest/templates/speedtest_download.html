@@ -1,0 +1,28 @@
+<{includeq file='db:speedtest_header.html'}>
+<div id="speedtest_content">
+	<div id="download_message">
+	    <center>
+	    <{$smarty.const._MN_SPEEDTEST_DOWNLOAD_DOWNLOAD_TEST}>&nbsp;(<{$down_kbytes}> kb)
+	    <div style="border: 1px solid black; width: <{$progress_bar_width}>" align="left" id="download_bar_div">
+	        <img src="<{$xoConfig.image_path}>bar.gif" width="0;" height="20px;" id="download_bar" />
+	    </div>
+	    </center>
+	</div>
+	
+	<div id="upload_message" style="visibility: hidden; display:none;">
+	    <center>
+	    <br /><br />
+	    <{$smarty.const._MN_SPEEDTEST_DOWNLOAD_UPLOAD_TEST}>&nbsp;(<{$up_kbytes}> kb)
+	    <div style="border: 1px solid black; width: <{$progress_bar_width}>" align="left" id="upload_bar_div">
+	            <img src="<{$xoConfig.image_path}>bar.gif" width="0;" height="20px;" id="upload_bar" />
+	    </div>
+	    </center>
+	</div>
+	<div id="speedtest_credits">
+	    <{$smarty.const._MN_SPEEDTEST_INDEX_CREDITS}>
+	</div>
+</div>
+<{includeq file='db:speedtest_footer.html'}>
+<form id="upload_test_form" name="upload_test" method="POST" action="<{$upload_url}>">
+<input type="hidden" id="upload_data" name="upload_data" value="" />
+</form>
