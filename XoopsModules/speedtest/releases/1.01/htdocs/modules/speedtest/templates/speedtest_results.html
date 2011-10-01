@@ -1,0 +1,41 @@
+<{includeq file='db:speedtest_header.html'}>
+<div id="speedtest_content">
+	<h2><{$smarty.const._MN_SPEEDTEST_RESULT_DOWNLOAD}>&nbsp;<{$clean_down}></h2>
+	<center>
+		<table>
+<{foreach from=$comparison_download item=item}>	
+			<tr>
+				<td><{$item.name}></td>
+				<td><{$item.clean_speed}></td>
+				<td width="400"><img src="<{$image_path}>bar.gif" height="10" width="<{$item.bar_width}>" alt="<{$item.value}> kbps" /></td>
+			</tr>
+<{/foreach}>
+			<tr>
+				<td><{$download.name}></td>
+				<td><{$download.clean_speed}></td>
+				<td width="400"><img src="<{$image_path}>bar.gif" height="10" width="<{$download.bar_width}>" alt="<{$download.value}> kbps" /></td>
+			</tr>
+		</table>
+	</center>
+<{if $uploadset}>
+	<h2><{$smarty.const._MN_SPEEDTEST_RESULT_UPLOAD}>&nbsp;<{$clean_up}></h2>
+	<center>
+		<table>
+<{foreach from=$comparison_upload item=item}>	
+			<tr>
+				<td><{$item.name}></td>
+				<td><{$item.clean_speed}></td>
+				<td width="400"><img src="<{$image_path}>bar.gif" height="10" width="<{$item.bar_width}>" alt="<{$item.value}> kbps" /></td>
+			</tr>
+<{/foreach}>
+			<tr>
+				<td><{$upload.name}></td>
+				<td><{$upload.clean_speed}></td>
+				<td width="400"><img src="<{$image_path}>bar.gif" height="10" width="<{$upload.bar_width}>" alt="<{$upload.value}> kbps" /></td>
+			</tr>
+		</table>
+	</center>
+<{/if}>
+</div>
+</center>
+<{includeq file='db:speedtest_footer.html'}>

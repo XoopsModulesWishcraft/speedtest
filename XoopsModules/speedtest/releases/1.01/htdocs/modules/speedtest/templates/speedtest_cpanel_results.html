@@ -1,0 +1,49 @@
+<h1><{$smarty.const._AM_SPEEDTEST_RESULTS_H1}></h1>
+<p><{$smarty.const._AM_SPEEDTEST_RESULTS_P}></p>
+<div style="clear:both; height:45px;">
+	<div style="float:right; height:45px;"><{$pagenav}></div>
+</div>
+
+<form action="<{$php_self}>" method='post'>
+<table>
+	<tr class="head">
+		<th><{$id_th}></th>
+		<th><{$uid_th}></th>
+		<th><{$ip_th}></th>
+		<th><{$ip_string_th}></th>
+		<th><{$downspeed_th}></th>
+		<th><{$upspeed_th}></th>
+		<th><{$timestamp_th}></th>
+	</tr>
+	<tr class="filter">
+		<th>&nbsp;</th>
+		<th><{$filter_uid_th}></th>
+		<th><{$filter_ip_th}></th>
+		<th><{$filter_ip_string_th}></th>
+		<th><{$filter_downspeed_th}></th>
+		<th><{$filter_upspeed_th}></th>
+		<th><{$filter_timestamp_th}></th>
+	</tr>
+	<{foreach item=item from=$speedtests}>
+	<tr class="<{cycle values="even,odd"}>">
+		<td align='center'><{$item.id}></td>
+		<td align='center'><{$item.user.uid}></td>
+		<td align='center'><{$item.ip}></td>
+		<td align='center'><{$item.ip_string}></td>
+		<td align='center'><{$item.downspeed}></td>
+		<td align='center'><{$item.upspeed}></td>
+		<td align='center'><{$item.timestamp}></td>
+	</tr>
+	<{/foreach}>
+	<tr class="foot">
+		<td colspan="7">&nbsp;</td>
+	</tr>
+</table>
+<input type='hidden' name='op' value='speedtest'/>
+<input type='hidden' name='fct' value='savelist'/>
+<input type='hidden' name='start' value='<{$start}>'/>
+<input type='hidden' name='limit' value='<{$limit}>'/>
+<input type='hidden' name='order' value='<{$order}>'/>
+<input type='hidden' name='sort' value='<{$sort}>'/>
+<input type='hidden' name='filter' value='<{$filter}>'/>
+</form>
