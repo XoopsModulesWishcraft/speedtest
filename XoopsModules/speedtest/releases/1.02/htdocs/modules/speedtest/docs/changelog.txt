@@ -1,0 +1,14 @@
+========================================
+ 2011/11/07 21:22:00 Version 1.02 STABLE
+========================================
+ - Added XOOPS 2.5.x Admin GUI  (Wishcraft)
+ - Added XOOPS 2.5.x Admin GUI Language Constants for Statistics language/english/admin.php  (Wishcraft)
+ - Added upload.php - Replacement for CGI Perl Script. (mdagn)
+ - Added function getMaximum() to class/speedtest.php (Wishcraft)
+ - Added function getMinimum() to class/speedtest.php (Wishcraft)
+ - Added function getAverage() to class/speedtest.php (Wishcraft)
+ - Changed speedtest_adminMenu() - Changed to include addNavigation from XOOPS 2.5 Admin GUI  (Wishcraft)
+ - Changed speedtest_footer_adminMenu() - Changed to include addNavigation from XOOPS 2.5 Admin GUI  (Wishcraft)
+ - Moved images/icons/admin to Frameworks/moduleclasses/icons/ (GUI) (Support for Right to left Languages)  (Wishcraft)
+ - Removed Removed Legacy CGI Script and Folders cgi-bin/upload.cgi (Wishcraft)
+ - Rename templates/speedtest_results.html to templates/speedtest_result.html (Wishcraft) 
