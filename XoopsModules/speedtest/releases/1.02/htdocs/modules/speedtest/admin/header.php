@@ -2,9 +2,9 @@
 
 
 	if (!defined('_CHARSET'))
-		define ("_CHARSET","UTF-8");
+		define("_CHARSET","UTF-8");
 	if (!defined('_CHARSET_ISO'))
-		define ("_CHARSET_ISO","ISO-8859-1");
+		define("_CHARSET_ISO","ISO-8859-1");
 		
 	include('../../../include/cp_header.php');
 
